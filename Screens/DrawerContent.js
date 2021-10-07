@@ -15,8 +15,10 @@ import {
 } from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import Icon2  from 'react-native-vector-icons/Ionicons';
+import { AuthContext } from '../component/AuthProvider';
 export function DrawerContent(props){
     const [isDarkTheme,setIsDarkThemes]=React.useState(false);
+    const {signOut}= React.useContext(AuthContext);
     const toggleTheme=()=>{
         setIsDarkThemes(!isDarkTheme);
     }
@@ -87,7 +89,7 @@ export function DrawerContent(props){
                             label="Notifications"
                             onPress={() => {props.navigation.navigate('NotificationScreen')}}
                         />
-                        <DrawerItem 
+                        {/*<DrawerItem 
                             icon={({color, size}) => (
                                 <Icon2 
                                 name="settings-outline" 
@@ -97,7 +99,7 @@ export function DrawerContent(props){
                             )}
                             label="Paramèttre"
                             onPress={() => {props.navigation.navigate('ParamètreScreen')}}
-                        />
+                            />*/}
                          <DrawerItem 
                             icon={({color, size}) => (
                                 <Icon2 
@@ -132,7 +134,7 @@ export function DrawerContent(props){
                         />
                     )}
                     label="Déconnexion"
-                    onPress={() => alert('Button Clicked!')}
+                    onPress={() =>(signOut())}
                 />
             </Drawer.Section>
 

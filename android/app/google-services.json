@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "222725076053",
+    "project_id": "healthclic",
+    "storage_bucket": "healthclic.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:222725076053:android:156426c466798b04b290dc",
+        "android_client_info": {
+          "package_name": "com.platforme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "222725076053-087rpm2gomcfr5qnlhd7n7nf9opbco8u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIO99LEa4PY1kcRtoK_-GvKa4_iIDZFdY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "222725076053-087rpm2gomcfr5qnlhd7n7nf9opbco8u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -17,7 +17,7 @@ import MapView from 'react-native-maps';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Fontisto from 'react-native-vector-icons/Fontisto';
-
+import FontAwesome  from 'react-native-vector-icons/FontAwesome';
 import { markers,mapDarkStyle,mapStandardStyle} from '../model/mapData';
 
 import { useTheme } from '@react-navigation/native';
@@ -34,25 +34,18 @@ const SearchScreen = () => {
     markers,
     categories: [
       { 
-        name: 'Fastfood Center', 
-        icon: <MaterialCommunityIcons style={styles.chipsIcon} name="food-fork-drink" size={18} />,
+        name: 'Location', 
+        icon: <FontAwesome style={styles.chipsIcon} name="sliders" size={18} />,
       },
       {
-        name: 'Restaurant',
-        icon: <Ionicons name="ios-restaurant" style={styles.chipsIcon} size={18} />,
+        name: 'Spécialité',
+        icon: <FontAwesome  name="sliders" style={styles.chipsIcon} size={18} />,
       },
       {
-        name: 'Dineouts',
-        icon: <Ionicons name="md-restaurant" style={styles.chipsIcon} size={18} />,
+        name: 'nom',
+        icon: <FontAwesome  name="sliders" style={styles.chipsIcon} size={18} />,
       },
-      {
-        name: 'Snacks Corner',
-        icon: <MaterialCommunityIcons name="food" style={styles.chipsIcon} size={18} />,
-      },
-      {
-        name: 'Hotel',
-        icon: <Fontisto name="hotel" style={styles.chipsIcon} size={15} />,
-      },
+     
   ],
   region: {
     latitude: 22.62938671242907,
@@ -122,18 +115,16 @@ return(
     style={styles.chipsScrollView}
    
     >
-     {state.categories.map((categories,index)=>{
+     {state.categories.map((category,index)=>{
 
        <TouchableOpacity  key={index} style={styles.chipsItem}>
-         {categories.icon}
+         {category.icon}
          <Text>
-           {categories.name}
+           {category.name}
          </Text>
          </TouchableOpacity>
      })}
     </ScrollView>
-   
-
     </View>
 );
 };

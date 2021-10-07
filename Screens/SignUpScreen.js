@@ -76,14 +76,14 @@ const SignInScreen = ({navigation}) => {
         <View style={styles.container}>
           <StatusBar backgroundColor='#009387' barStyle="light-content"/>
           <View style={styles.header}>
-            <Text style={styles.text_header}>Register Now!</Text>
+            <Text style={styles.text_header}>S'inscrire maintenant !</Text>
           </View>
          <Animatable.View 
             animation="fadeInUpBig"
             style={styles.footer}
          >
             <ScrollView>
-            <Text style={styles.text_footer}>Username</Text>
+            <Text style={styles.text_footer}>Nom d'utilisateur</Text>
             <View style={styles.action}>
                 <FontAwesome 
                     name="user-o"
@@ -91,7 +91,7 @@ const SignInScreen = ({navigation}) => {
                     size={20}
                 />
                 <TextInput 
-                    placeholder="Your Username"
+                    placeholder="Nom d'utilisateur"
                     style={styles.textInput}
                     autoCapitalize="none"
                     onChangeText={(val) => textInputChange(val)}
@@ -111,7 +111,7 @@ const SignInScreen = ({navigation}) => {
 
             <Text style={[styles.text_footer, {
                 marginTop: 35
-            }]}>Password</Text>
+            }]}>Mot de passe</Text>
             <View style={styles.action}>
                 <Feather 
                     name="lock"
@@ -119,7 +119,8 @@ const SignInScreen = ({navigation}) => {
                     size={20}
                 />
                 <TextInput 
-                    placeholder="Your Password"
+                    placeholder="Votre mot de passe"
+                  
                     secureTextEntry={data.secureTextEntry ? true : false}
                     style={styles.textInput}
                     autoCapitalize="none"
@@ -146,7 +147,7 @@ const SignInScreen = ({navigation}) => {
 
             <Text style={[styles.text_footer, {
                 marginTop: 35
-            }]}>Confirm Password</Text>
+            }]}>Confirmez le mot de passe</Text>
             <View style={styles.action}>
                 <Feather 
                     name="lock"
@@ -154,7 +155,7 @@ const SignInScreen = ({navigation}) => {
                     size={20}
                 />
                 <TextInput 
-                    placeholder="Confirm Your Password"
+                    placeholder="Confirmez votre mot de passe"
                     secureTextEntry={data.confirm_secureTextEntry ? true : false}
                     style={styles.textInput}
                     autoCapitalize="none"
@@ -180,11 +181,11 @@ const SignInScreen = ({navigation}) => {
             </View>
             <View style={styles.textPrivate}>
                 <Text style={styles.color_textPrivate}>
-                    By signing up you agree to our
+                En vous inscrivant, vous acceptez notre
                 </Text>
-                <Text style={[styles.color_textPrivate, {fontWeight: 'bold'}]}>{" "}Terms of service</Text>
+                <Text style={[styles.color_textPrivate, {fontWeight: 'bold'}]}>{" "}Conditions d'utilisation</Text>
                 <Text style={styles.color_textPrivate}>{" "}and</Text>
-                <Text style={[styles.color_textPrivate, {fontWeight: 'bold'}]}>{" "}Privacy policy</Text>
+                <Text style={[styles.color_textPrivate, {fontWeight: 'bold'}]}>{" "}Politique de confidentialité</Text>
             </View>
             <View style={styles.button}>
                 <TouchableOpacity

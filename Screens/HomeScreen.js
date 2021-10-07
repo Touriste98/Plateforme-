@@ -1,15 +1,14 @@
 import React from 'react';
-import { StyleSheet, View,Button,Text,StatusBar } from 'react-native';
+import Card from './Components/CardAide';
+import { StyleSheet, View,Button,Text,StatusBar,ScrollView } from 'react-native';
   const HomeScreen =({navigation})=> {
     
     return (
         <View style={styles.container}>
 
-        <Text>Accueil Screen</Text>
-        <Button
-            title="Go to details screen"
-            onPress={() => navigation.navigate("DetailsScreen")}
-        />
+       <ScrollView>
+        
+       </ScrollView>
       
       </View>
     )
